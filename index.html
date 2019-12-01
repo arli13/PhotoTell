@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="A social media platform. A combination of arts.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PhotoTell | Where photos tell their stories.</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link href="css\style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+                apiKey: "",
+                authDomain: "",
+                databaseURL: "",
+                projectId: "",
+                storageBucket: "",
+                messagingSenderId: "",
+                appId: "",
+                measurementId: ""
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+        </script>
+        <!--navigator-->
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+                    <h1>PhotoTell</h1>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                    data-target="#navbarResponsive">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">News</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Reviews</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Profile</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+        
+        <!--home-->
+        <div class="container-fluid padding" id="story">
+            <h3>Stories</h3>
+            <div class="row text-center padding">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <img src="photos/img0016.jpg" class="img-fluid">
+                    <p>Longest wait for a seagull on a ferry.</p>
+                    <button type="button" class="btn btn-primary btn-lg">Read This Story</button>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <img src="photos/IMG_1942.JPG" class="img-fluid">
+                    <p>Amusement in Pripyat. It is real.</p>
+                    <button type="button" class="btn btn-primary btn-lg">Read This Story</button>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <img src="photos/IMG_1999.JPG" class="img-fluid">
+                    <p>Secret Soviet radar. The legendary Duga.</p>
+                    <button type="button" class="btn btn-primary btn-lg">Read This Story</button>
+                </div>
+            </div>
+            <hr class="my-4">
+        </div>
+        
+        <!--News-->
+        <div class="container-fluid padding" id="news">
+            <h3>News</h3>
+            <div class="row text-center padding">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <img src="photos/ara.jpg" class="img-fluid">
+                    <p>Ara Güler Museum is opened in Bomonti, İstanbul.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <img src="photos/leicam10.jpg" class="img-fluid">
+                    <p>Leica just anounced it's new camera.</p>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <img src="photos/fisheye.jpg" class="img-fluid">
+                    <p>Nikon's brand new fisheye lens is on markets.</p>
+                </div>
+            </div>
+            <hr class="my-4">
+        </div>
+        <!--Reviews-->
+        <div class="container-fluid padding" id="reviews">
+            <h3>Reviews</h3>
+            <div class="row padding">
+                <div class="col-md-12 col-lg 6">
+                    <h3>Ricoh Kr-10 X</h3>
+                    <p>The KR-10x is an SLR for 35mm film from Ricoh which accepts K mount lenses. In some markets the same model is labeled XR-10.</p>
+                    <p>This camera is based around an electronically-timed shutter, which needs two 1.5 volt LR44/SR44 type batteries to operate; it provides both aperture-priority autoexposure and a wide range of manual shutter speeds (1/1000 sec. to 16 seconds) plus flash sync up to 1/125th.</p>
+                    <br>
+                    <a href="#" class="btn btn-primary">Read More</a>                     
+                </div>
+                <div class="col-lg-6">
+                    <img src="photos/Ricoh_KR-10x.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        
+        <div class="container contact-form">
+	        <h1>Contact Us</h1>
+	            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <address>Istanbul, TR</address>
+                    <p>Email: test@test.com</p>
+                    <p>Please contact us for any suggestions.</p>
+                    <p>You can also contact us for stories you want to share or reviews. Don't forget we need your support:)</p>
+                    <p>Just write the topic you want to contact for to the message part.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+         	            <label>Name</label>
+         	            <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+         	            <label>Email</label>
+         	            <input type="text" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+         	            <label>Message</label>
+         	            <textarea  class="form-control" rows="4" id="message"></textarea>
+                    </div>
+                    <div class="form-group">
+         	            <button class="btn btn-primary btn-block">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
